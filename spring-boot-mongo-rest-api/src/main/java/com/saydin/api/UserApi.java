@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @RestController
@@ -17,6 +18,14 @@ public class UserApi {
 
     @Autowired
     private IUserRepository userRepository;
+
+    @PostConstruct
+    public void init(){
+        User user=new User();
+        user.setName("Sem");
+        user.setSurname("Ayd");
+        userRepository.save(user);
+    }
 
     @PostMapping
     public ResponseEntity<User> add(User user){

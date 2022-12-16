@@ -13,6 +13,6 @@
 		<module>spring-boot-simple-api</module>
 	</modules>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>8</java.version>
 	</properties>
 </project>
