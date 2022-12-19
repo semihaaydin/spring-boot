@@ -10,8 +10,9 @@
 	<description>Demo project for Spring Boot</description>
     <modules>
         <module>spring-boot-mongo-rest-api</module>
-		<module>spring-boot-simple-api</module>
 		<module>spring-elasticsearch</module>
+		<module>spring-datajpa-postgresql</module>
+		<module>spring-data-jpa</module>
 	</modules>
 	<properties>
 		<java.version>8</java.version>
