@@ -13,7 +13,8 @@
 		<module>spring-elasticsearch</module>
 		<module>spring-datajpa-postgresql</module>
 		<module>spring-data-jpa</module>
-	</modules>
+        <module>springboot-api-doc-swagger</module>
+    </modules>
 	<properties>
 		<java.version>8</java.version>
 	</properties>
