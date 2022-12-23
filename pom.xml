@@ -14,6 +14,7 @@
 		<module>spring-datajpa-postgresql</module>
 		<module>spring-data-jpa</module>
         <module>springboot-api-doc-swagger</module>
+        <module>spring-rabbitmq</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
