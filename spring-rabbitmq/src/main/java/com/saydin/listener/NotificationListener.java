@@ -7,12 +7,11 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 @Service
-@EnableAsync
 public class NotificationListener {
 
-    @RabbitListener(queues ="queue1")
-    @Async
-    public void handleMessage(Notification notification){
-        System.out.println("Message..GET . Queue 1 "+notification.getNotificationId());
+    @RabbitListener(queues ="saydin-queue1")
+    public void handleMessage(Notification notification) throws InterruptedException {
+        Thread.sleep(3000);
+        System.out.println("Message..GET . Queue 1 "+notification.getCreatedTime().toString());
     }
 }
