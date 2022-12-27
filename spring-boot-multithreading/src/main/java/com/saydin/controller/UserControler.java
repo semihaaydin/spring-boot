@@ -20,6 +20,7 @@ public class UserControler {
     @Autowired
     private UserService service;
 
+    //http://localhost:9191/user
     @PostMapping
     public ResponseEntity saveUsersWithFakeData() {
         service.saveUserWithFakeData();
@@ -32,6 +33,7 @@ public class UserControler {
     }
 
 
+    //http://localhost:9191/user/getUsersByThread
     @GetMapping(value = "/getUsersByThread")
     public  ResponseEntity getUsers(){
         service.sendEmailTask();

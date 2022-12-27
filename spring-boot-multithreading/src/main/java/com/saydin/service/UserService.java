@@ -50,7 +50,7 @@ public class UserService {
         List<User> users=repository.findAll();
         users.stream().forEach(user ->{
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
                 System.out.println("Get  "+user.getId() +user.getEmail()+" by: "+Thread.currentThread().getName());
             } catch (InterruptedException e){
                 e.printStackTrace();
@@ -65,8 +65,23 @@ public class UserService {
         List<User> users=repository.findAll();
         users.stream().forEach(user ->{
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 System.out.println("Sending email to "+user.getId() +user.getEmail()+" by: "+Thread.currentThread().getName());
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        });
+        return users;
+    }
+
+    @Async
+    public List<User> sendSMSTask(){
+        logger.info("sendSMSTask list of user by "+Thread.currentThread().getName());
+        List<User> users=repository.findAll();
+        users.stream().forEach(user ->{
+            try {
+                Thread.sleep(1000);
+                System.out.println("Sending sms to "+user.getId() +user.getEmail()+" by: "+Thread.currentThread().getName());
             } catch (InterruptedException e){
                 e.printStackTrace();
             }
