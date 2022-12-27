@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
 
 @Configuration // Spring ayağa kalkarken bunu okusun
 @EnableAsync
@@ -23,6 +26,7 @@ public class RabbitMqConfiguration {
     @Value("${sr.rabbit.exchange.name}")
     private String exchangeName; //exchange name
 
+
     @Autowired
     private RabbitTemplate rabbitTemplate; //rabbit kuyruğuna gelmek için kullanırız.
 
@@ -30,6 +34,7 @@ public class RabbitMqConfiguration {
     public Queue queue() { //amq dan gelir.
         return new Queue(queueName, true);
     }
+
 
     @Bean
     public DirectExchange directExchange() { ////amq dan gelir.
@@ -40,4 +45,7 @@ public class RabbitMqConfiguration {
     public Binding binding(Queue queue, DirectExchange directExchange){
         return BindingBuilder.bind(queue).to(directExchange).with(routingName);
     }
+
+
+
 }

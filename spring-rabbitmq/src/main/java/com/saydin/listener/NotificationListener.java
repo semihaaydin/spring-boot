@@ -10,8 +10,14 @@ import org.springframework.stereotype.Service;
 public class NotificationListener {
 
     @RabbitListener(queues ="saydin-queue1")
+    @Async
     public void handleMessage(Notification notification) throws InterruptedException {
-        Thread.sleep(3000);
-        System.out.println("Message..GET . Queue 1 "+notification.getCreatedTime().toString());
+        System.out.println("RabbitListener 1 "+notification.getNotificationId() + " by: "+Thread.currentThread().getName());
+    }
+
+    @RabbitListener(queues ="saydin-queue1")
+    @Async
+    public void handleMessage2(Notification notification) throws InterruptedException {
+        System.out.println("RabbitListener 2 "+notification.getNotificationId() + " by: "+Thread.currentThread().getName());
     }
 }

@@ -9,7 +9,7 @@ import java.util.Date;
 public class Notification implements Serializable {
     //bu nesneyi kuruğa gönderebilmemiz için serilazible olması gerekmektedir.
 
-    private String notificationId;
+    private int notificationId;
     private Date createdTime;
     private Boolean seen; //ulaşıldı mı
     private String message;

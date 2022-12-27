@@ -4,6 +4,7 @@ import com.saydin.entity.Notification;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,11 @@ public class NotificationProducer {
     @Value("${sr.rabbit.exchange.name}")
     private String exchangeName; //exchange name
 
-    public void sendToQueue(Notification notification){
-        System.out.println("Message..SET "+notification.getMessage());
+
+    @Async
+    public void sendToQueue(Notification notification) throws InterruptedException {
         rabbitTemplate.convertAndSend(exchangeName,routingName,notification);
+        System.out.println("Sending queue1 "+notification.getNotificationId() + " by: "+Thread.currentThread().getName());
     }
+
 }

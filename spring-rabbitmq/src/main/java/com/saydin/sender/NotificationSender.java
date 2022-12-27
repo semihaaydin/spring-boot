@@ -23,15 +23,28 @@ public class NotificationSender {
 
     public void getThread() {
         Thread thread = new Thread(() -> {
+            int i=0;
             while (true) {
+                i++;
                 Notification notification=new Notification();
-                notification.setNotificationId(UUID.randomUUID().toString());
+                notification.setNotificationId(i);
                 notification.setMessage("First Procuder First Queue! ");
                 notification.setCreatedTime(new Date());
                 notification.setSeen(Boolean.FALSE);
-                producer.sendToQueue(notification);
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(5000); // 5 dakikaya bir q ya veri yaz.
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+                    producer.sendToQueue(notification);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
