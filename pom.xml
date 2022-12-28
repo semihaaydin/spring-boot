@@ -16,6 +16,7 @@
         <module>springboot-api-doc-swagger</module>
         <module>spring-rabbitmq</module>
         <module>spring-boot-multithreading</module>
+        <module>spring-boot-dockerization</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
