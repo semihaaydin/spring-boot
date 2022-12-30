@@ -15,11 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/kisi")
-
+@RequiredArgsConstructor
 public class EmploymentController {
 
-    @Autowired
-    public EmploymentService employmentService;
+    private final EmploymentService employmentService;
 
     @GetMapping
     public ResponseEntity<List<EmploymentDTO>> getAll() {
