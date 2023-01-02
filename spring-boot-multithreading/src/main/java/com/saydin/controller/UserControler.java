@@ -27,11 +27,10 @@ public class UserControler {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping(value = "/users")
+    @GetMapping
     public List<User> findAllUsers() {
-        return  service.findAllUsers();
+        return  service.findAllUsersWithoutAsyn();
     }
-
 
     //http://localhost:9191/user/getUsersByThread
     @GetMapping(value = "/getUsersByThread")

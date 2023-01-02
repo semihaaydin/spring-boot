@@ -44,6 +44,11 @@ public class UserService {
         repository.saveAll(users);
     }
 
+    public List<User> findAllUsersWithoutAsyn(){
+        List<User> users=repository.findAll();
+        return users;
+    }
+
     @Async
     public List<User> findAllUsers(){
         logger.info("get list of user by "+Thread.currentThread().getName());

@@ -24,7 +24,6 @@ public class CustomerApi {
         customers.add(new Customer(1L,"A company","Mahmut"));
         customers.add(new Customer(1L,"B company","Ali"));
         customers.add(new Customer(1L,"C company","Veli"));
-
     }
 
     @GetMapping

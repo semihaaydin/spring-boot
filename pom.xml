@@ -18,7 +18,8 @@
         <module>spring-boot-multithreading</module>
         <module>spring-boot-dockerization</module>
 		<module>spring-boot-aop</module>
-        <module>spring-boot-grapql</module>
+        <module>spring-boot-graphql</module>
+        <module>spring-boot-rest-remplate</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
