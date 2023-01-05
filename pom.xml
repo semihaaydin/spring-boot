@@ -19,7 +19,8 @@
         <module>spring-boot-dockerization</module>
 		<module>spring-boot-aop</module>
         <module>spring-boot-graphql</module>
-    </modules>
+		<module>spring-boot-redis</module>
+	</modules>
 	<properties>
 		<java.version>8</java.version>
 	</properties>

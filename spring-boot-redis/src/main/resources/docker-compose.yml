@@ -1,0 +1,10 @@
+version: '2'
+  services:
+    redis:
+      build: .
+      environment:
+        - ALLOW_EMPTY_PASSWORD=no
+        - REDIS_PASSWORD=saydin123
+        - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+      ports:
+        - 6379:6379
