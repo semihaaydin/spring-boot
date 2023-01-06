@@ -20,7 +20,8 @@
 		<module>spring-boot-aop</module>
         <module>spring-boot-graphql</module>
 		<module>spring-boot-redis</module>
-	</modules>
+        <module>spring-boot-web-socket</module>
+    </modules>
 	<properties>
 		<java.version>8</java.version>
 	</properties>
