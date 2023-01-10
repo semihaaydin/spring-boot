@@ -21,6 +21,8 @@
         <module>spring-boot-graphql</module>
 		<module>spring-boot-redis</module>
         <module>spring-boot-web-socket</module>
+        <module>spring-book-server-side-pagination</module>
+        <module>spring-boot-pagination</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
