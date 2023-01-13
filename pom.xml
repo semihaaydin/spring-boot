@@ -24,6 +24,7 @@
         <module>spring-book-server-side-pagination</module>
         <module>spring-boot-pagination</module>
         <module>spring-boot-events</module>
+        <module>spring-boot-kafka</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
