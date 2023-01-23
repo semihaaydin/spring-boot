@@ -21,10 +21,10 @@
         <module>spring-boot-graphql</module>
 		<module>spring-boot-redis</module>
         <module>spring-boot-web-socket</module>
-        <module>spring-book-server-side-pagination</module>
         <module>spring-boot-pagination</module>
         <module>spring-boot-events</module>
         <module>spring-boot-kafka</module>
+        <module>spring-boot-db-migration</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
