@@ -25,6 +25,7 @@
         <module>spring-boot-events</module>
         <module>spring-boot-kafka</module>
         <module>spring-boot-db-migration</module>
+        <module>spring-boot-versioning</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
