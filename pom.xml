@@ -29,6 +29,7 @@
         <module>spring-boot-exception-handling</module>
         <module>spring-boot-hazelcast</module>
         <module>spring-boot-web-flux</module>
+        <module>spring-boot-logging</module>
     </modules>
 	<properties>
 		<java.version>8</java.version>
